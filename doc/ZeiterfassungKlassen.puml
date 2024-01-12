@@ -1,0 +1,44 @@
+@startuml
+!pragma layout smetana
+hide circle
+skinparam classAttributeIconSize 0
+
+title Klassendiagramm
+
+class Benutzer {
+    - userid:   int
+    - passwort: String
+    - vorname:  String
+    - Nachname: String
+    - e-mail:   String
+    - Funktion: String
+}
+
+class Zeiterfassung {
+    - eintragid:   int
+    - datum:       datum
+    - startzeit:   LocalDateTime.now
+    - endzeit:     LocalDateTime.now
+    - pausenzeit:  LocalDateTime.now
+    - zustandid:   int
+
+}
+
+class Bericht {
+    - userid:      int
+    - eintragid:   datum
+    - bericht:     String
+
+}
+
+class Zustand {
+    - zustand:      String
+
+}
+class Abwesenheit {
+    - begründung:      String
+
+}
+
+@enduml
+val currentDateTime = LocalDateTime.now()
