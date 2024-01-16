@@ -36,6 +36,7 @@ class Zustand {
 
 }
 class Abwesenheit {
+    - abwesenheitsid:            int
     - begründung:      String
 
 }
