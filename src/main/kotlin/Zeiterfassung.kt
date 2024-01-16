@@ -11,5 +11,4 @@ class Zeiterfassung {
     private var pausenzeit=     LocalDateTime.now()
     private var abwesenheitid:  Int   = 0
     private var zustandid:      Int   = 0
-
 }
