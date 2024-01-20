@@ -18,7 +18,7 @@ fun main() {
     val currentDateTime = LocalDateTime.now()
 
     var buttonStart = 0
-    var buttonPause = 0
+    var buttonPause = 1
 
     var startZeit           = LocalTime.now()
     var endZeit             = LocalTime.now()
