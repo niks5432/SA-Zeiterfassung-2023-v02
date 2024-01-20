@@ -1,0 +1,19 @@
+Index: src/main/kotlin/DatenbankEintraZeit.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/*\n * Titel: RDB-Test\n * Firma: ABB TS\n * Autor: M. Bontognali\n *\n * Beschreibung:\n * Daten via JDBC von MySQL DB speichern.\n * Verwendet die Bibliothek mysql-connector-j-8.2.0.jar.\n *\n * Einrichten der Datenbank:\n * create database people;\n * use people;\n * CREATE TABLE tabPerson (\n *   name VARCHAR(50) NOT NULL,\n *   age INTEGER\n * );\n *\n * Achtung:\n * MySQL Server muss in Betrieb sein.\n */\n\nimport java.sql.DriverManager\nimport java.sql.*\nimport java.time.LocalDateTime\nimport java.util.*\n\n\nfun DatenbankEintraZeit() {\n    val currentDateTime = LocalDateTime.now()\n    val PROTOCOL = \"jdbc:mysql\"\n    val HOST =     \"localhost\"\n    val PORT =     3306\n    val DATABASE = \"SA-Semesterarbeit-2023\"\n    val OPTIONS =  \"useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC\"\n    val URL =      \"$PROTOCOL://$HOST:$PORT/$DATABASE?$OPTIONS\"\n    val USER =     \"UserTest\"\n    val PASSWORD = \"admin\"\n\n    // Zu speichernde Daten\n    val userId      =   0\n    val vorname     =   \"Michi\"\n    val nachname    =   \"Der\"\n    val passwort    =   \"2580\"\n    val email       =   \"michi.der@der.ch\"\n    val funktion    =   \"Handlanger\"\n\n    // Verbindung zur DB herstellen\n    val connection= DriverManager.getConnection(URL, USER, PASSWORD)\n\n    // Statement erzeugen\n    val statement = connection.createStatement()\n\n    // SQL erstellen um Daten in DB speichern\n    val sql = \"\"\"INSERT INTO Benutzer (\n                     userid,\n                     passwort,\n                     vorname,\n                     nachname,\n                     email,\n                     funktion)\n                 VALUES (\n                     '$variableUserId',\n                     '$variablePasswort',\n                     '$variableVorname',\n                     '$variableNachname',\n                     '$variableEmail',\n                     '$variableFunktion'\n                 )\"\"\"\n\n    // SQL ausfuehren\n    statement.executeUpdate(sql)\n    println(\"Daten in DB gespeichert.\")\n}\n\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/kotlin/DatenbankEintraZeit.kt b/src/main/kotlin/DatenbankEintraZeit.kt
+--- a/src/main/kotlin/DatenbankEintraZeit.kt	(revision 76d4216a665c17c37f5d517f09844d6616e5cf84)
++++ b/src/main/kotlin/DatenbankEintraZeit.kt	(date 1705783199191)
+@@ -37,7 +37,7 @@
+     val PASSWORD = "admin"
+ 
+     // Zu speichernde Daten
+-    val userId      =   0
++    val userId      =   1234
+     val vorname     =   "Michi"
+     val nachname    =   "Der"
+     val passwort    =   "2580"
