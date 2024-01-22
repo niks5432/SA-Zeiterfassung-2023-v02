@@ -69,10 +69,3 @@ fun zeitEruieren() {
     DatenbankEintraZeit(userId, startZeit, endZeit, formatiereZeit(pausenZeit), zustandid = 1, abwesenheitsid = 4)
 }
 
-fun formatiereZeit (dauer: Duration): String {
-    val stunden = dauer.toHours()
-    val minuten = dauer.toMinutesPart()
-    val sekunden = dauer.toSecondsPart()
-
-    return "$stunden:$minuten:$sekunden"
-}

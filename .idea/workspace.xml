@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19125e90-b529-43dd-900a-4d423a336e09" name="Changes" comment="12-01-24 Zeiterfassung Eintrag Code erstellt. Funktion DatenbankEintraZeit erstellt v02 - Zeiterfassung COde mit DatenbankEintraZeit funktion in Datenbank geschrieben">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/LesenUserDB.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/ZeitEruieren.kt" afterDir="false" />
+    <list default="true" id="19125e90-b529-43dd-900a-4d423a336e09" name="Changes" comment="22-01-24 Erstellen LogIn Code &amp; Code Lesen aller Benutzerdaten">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Menue.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/DatenbankEintraZeit.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/DatenbankEintraZeit.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/LesenUserDB.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/LesenUserDB.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/LogIn.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/LogIn.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +47,7 @@
     "DefaultPlantUmlFileTemplate": "UML Sequence",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "Nikola-22-01-24",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
@@ -95,7 +96,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705933253266</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="22-01-24 Erstellen LogIn Code &amp; Code Lesen aller Benutzerdaten">
+      <option name="closed" value="true" />
+      <created>1705943555653</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705943555653</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -113,7 +122,8 @@
     <MESSAGE value="12-01-24 Erstellen des Projekt v02" />
     <MESSAGE value="12-01-24 Zeiterfassung Eintrag Code erstellt. Funktion DatenbankEintraZeit erstellt" />
     <MESSAGE value="12-01-24 Zeiterfassung Eintrag Code erstellt. Funktion DatenbankEintraZeit erstellt v02 - Zeiterfassung COde mit DatenbankEintraZeit funktion in Datenbank geschrieben" />
-    <option name="LAST_COMMIT_MESSAGE" value="12-01-24 Zeiterfassung Eintrag Code erstellt. Funktion DatenbankEintraZeit erstellt v02 - Zeiterfassung COde mit DatenbankEintraZeit funktion in Datenbank geschrieben" />
+    <MESSAGE value="22-01-24 Erstellen LogIn Code &amp; Code Lesen aller Benutzerdaten" />
+    <option name="LAST_COMMIT_MESSAGE" value="22-01-24 Erstellen LogIn Code &amp; Code Lesen aller Benutzerdaten" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
