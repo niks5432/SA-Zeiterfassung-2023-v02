@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19125e90-b529-43dd-900a-4d423a336e09" name="Changes" comment="12-01-24 Erstellen Klassen">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Abwesenheit.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Bericht.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Zeiterfassung.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Zustand.kt" afterDir="false" />
+    <list default="true" id="19125e90-b529-43dd-900a-4d423a336e09" name="Changes" comment="12-01-24 Zeiterfassung Eintrag Code erstellt. Funktion DatenbankEintraZeit erstellt">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/ZeiterfassungKlassen.puml" beforeDir="false" afterPath="$PROJECT_DIR$/doc/ZeiterfassungKlassen.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Benutzer.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Benutzer.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SA-Zeiterfassung-2023-v02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SA-Zeiterfassung-2023-v02.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/DatenbankEintraZeit.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/DatenbankEintraZeit.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,15 +21,21 @@
       <list>
         <option value="UML Sequence" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="123" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 0
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
   <component name="ProjectId" id="2arbDDtbng7NjTFUCKqZaAQcOwd" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -44,7 +47,10 @@
     "DefaultPlantUmlFileTemplate": "UML Sequence",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+    "git-widget-placeholder": "master",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.3413793"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -72,7 +78,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705082700420</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="12-01-24 Zeiterfassung Eintrag Code erstellt. Funktion DatenbankEintraZeit erstellt">
+      <option name="closed" value="true" />
+      <created>1705783917629</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1705783917629</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -88,6 +102,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="12-01-24 Erstellen des Projekt v02" />
-    <option name="LAST_COMMIT_MESSAGE" value="12-01-24 Erstellen des Projekt v02" />
+    <MESSAGE value="12-01-24 Zeiterfassung Eintrag Code erstellt. Funktion DatenbankEintraZeit erstellt" />
+    <option name="LAST_COMMIT_MESSAGE" value="12-01-24 Zeiterfassung Eintrag Code erstellt. Funktion DatenbankEintraZeit erstellt" />
   </component>
 </project>

@@ -1,0 +1,19 @@
+Index: src/main/kotlin/Main.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>/*\n * Titel: Zeiterfassung MAIN\n * Firma: ABB TS\n * Autor: Nikola Djukic\n */\n\nimport java.sql.Time\nimport java.time.Duration\nimport java.time.LocalDate\nimport java.time.LocalDateTime\nimport java.time.LocalTime\nimport java.util.*\n\nfun main() {\n\n    // Variablen Deklaration\n\n    val currentDateTime = LocalDateTime.now()\n\n    var buttonStart = 0\n    var buttonPause = 0\n\n    var startZeit           = LocalTime.now()\n    var endZeit             = LocalTime.now()\n    var pausenzeitBeginn    = LocalTime.now()\n    var pausenzeitEnde      = LocalTime.now()\n\n\n    // Schleife um die Zeiten für den heutigen Ta zu eruieren\n    while (buttonStart <= 3) {\n\n        // Einlesen welches ereigniss gerade stattfindet\n        println(\"Badge Scanen\")\n        buttonStart = readln().toInt()\n\n        // Bedingungen die ausgeführt werden nach dem Einlesen des ereignisses\n        when (buttonStart) {\n            1 -> {\n                startZeit = LocalTime.now()\n                startZeit = startZeit.withNano(0)\n\n                println(\"Startzeit $startZeit\")\n\n            }\n\n            4 -> {\n                endZeit = LocalTime.now()\n                endZeit = endZeit.withNano(0)\n\n                println(\"Endzeit $endZeit\")\n            }\n\n            2 -> {\n                pausenzeitBeginn = LocalTime.now()\n                pausenzeitBeginn = pausenzeitBeginn.withNano(0)\n\n                println(\"pausenzeitBeginn $pausenzeitBeginn\")\n            }\n\n            3 -> {\n                pausenzeitEnde = LocalTime.now()\n                pausenzeitEnde = pausenzeitEnde.withNano(0)\n\n                println(\"pausenzeitEnde $pausenzeitEnde\")\n            }\n        }\n    }\n\n    // Deklaration und ausrechnen der Arbeits & Pausenzeit\n    var arbeitsZeit = Duration.between(startZeit,endZeit)\n    var pausenZeit  = Duration.between(pausenzeitBeginn,pausenzeitEnde)\n\n    // Mit ${} kan in println eine funktion aufgerufen werden\n    println(\"Arbeitszeit: ${formatiereZeit(arbeitsZeit)} | Pausenzeit: ${formatiereZeit(pausenZeit)}\")\n\n    val zeiten = mutableListOf(startZeit, endZeit, formatiereZeit(pausenZeit))\n\n    println(zeiten)\n\n\n}\n\n// Funktion damit die Zeit korrekt formatiert wird, weil Duration Methode einen ISO Datentypen zurückgibt\nfun formatiereZeit (dauer: Duration): String {\n    val stunden = dauer.toHours()\n    val minuten = dauer.toMinutesPart()\n    val sekunden = dauer.toSecondsPart()\n\n    return \"$stunden:$minuten:$sekunden\"\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/kotlin/Main.kt b/src/main/kotlin/Main.kt
+--- a/src/main/kotlin/Main.kt	(revision 76d4216a665c17c37f5d517f09844d6616e5cf84)
++++ b/src/main/kotlin/Main.kt	(date 1705783755246)
+@@ -18,7 +18,7 @@
+     val currentDateTime = LocalDateTime.now()
+ 
+     var buttonStart = 0
+-    var buttonPause = 0
++    var buttonPause = 1
+ 
+     var startZeit           = LocalTime.now()
+     var endZeit             = LocalTime.now()

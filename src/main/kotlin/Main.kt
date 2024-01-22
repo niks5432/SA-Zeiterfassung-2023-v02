@@ -1,24 +1,22 @@
-/*
- * Titel: Zeiterfassung MAIN
- * Firma: ABB TS
- * Autor: Nikola Djukic
- */
 
-import java.sql.Time
+///*
+// * Titel: Zeiterfassung MAIN
+// * Firma: ABB TS
+// * Autor: Nikola Djukic
+// */
+//
 import java.time.Duration
-import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.LocalTime
-import java.util.*
 
 fun main() {
 
     // Variablen Deklaration
 
     val currentDateTime = LocalDateTime.now()
-
+    var userId      = 1
     var buttonStart = 0
-    var buttonPause = 1
+    var buttonPause = 1.111
 
     var startZeit           = LocalTime.now()
     var endZeit             = LocalTime.now()
@@ -77,7 +75,7 @@ fun main() {
 
     println(zeiten)
 
-
+    DatenbankEintraZeit(userId, startZeit, endZeit, formatiereZeit(pausenZeit), zustandid = 1, abwesenheitsid = 4)
 }
 
 // Funktion damit die Zeit korrekt formatiert wird, weil Duration Methode einen ISO Datentypen zurückgibt
