@@ -11,7 +11,6 @@ fun menue(admin: String) {
             println("Log Out")
             var input = readln().toInt()
             when (input) {
-
                 1 -> zeitEruieren()
                 2 -> zeitArchiv()
                 3 -> zeiterfassungVisieren()
@@ -30,11 +29,10 @@ fun menue(admin: String) {
                 1 -> zeitEruieren()
                 2 -> zeitArchiv()
                 3 -> zeiterfassungVisieren()
-                4 -> benutzerErstellen()
                 5 -> schleifeEndeLogOut = false
             }
         }
-
-
-    } while (schleifeEndeLogOut != true)
+    } while (schleifeEndeLogOut == true)
+    println("Sie wurden Ausgeloggt")
+    main()
 }

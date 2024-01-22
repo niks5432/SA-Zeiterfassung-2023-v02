@@ -9,7 +9,7 @@
 import java.time.Duration
 import java.time.LocalDateTime
 import java.time.LocalTime
-var userId = 0
+var userIdString = ""
 var passwort = ""
 var vorname = ""
 var nachname = ""
@@ -18,9 +18,8 @@ var funktion = ""
 var admin = ""
 
 fun main() {
-
     do {
-        // damit Ende eingeleitet werden kann
+        // damit Ende der Schleife eingeleitet werden kann
         var schleifenEndeLogIn   = false
 
         // Benutzer abfrage
@@ -34,7 +33,7 @@ fun main() {
         userDaten = LesenUserDB(user)                                     // Lesen der Benutzer Daten aus der Datenbank und speichern in userDaten
         //println(userDaten)                                             //um Ausgabe zu überprüfen
 
-        val userDatenSplit = SplitString(userDaten)                     // Splitet den String userDaten nach Abstand und speichert es in userDaten Split
+        val userDatenSplit = SplitString(userDaten)                     // Splitet den String userDaten nach Abstand und speichert es in Liste userDaten Split
         if (userDatenSplit.get(2) == user) {                           //überprüft ob der Benutername in Datenbank enthalten ist
             if (userDatenSplit.get(1) == userpasswort) {              //überprüft ob Passwirt in der Datenbank mit dem Benutzerpasswort übereinstimmt
                     schleifenEndeLogIn = true

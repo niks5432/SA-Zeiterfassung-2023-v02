@@ -27,3 +27,15 @@ fun benutzerErstellen() {
 
 }
 
+
+fun berichteintrag() {
+
+    println("Bitte heutige Arbeit zusammenfassen")
+    val Bericht = readln()
+    EintragBerichgtDB()
+}
+
+fun EintragBerichgtDB() {
+
+
+}

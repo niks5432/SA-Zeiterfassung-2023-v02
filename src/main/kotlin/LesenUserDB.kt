@@ -34,24 +34,24 @@ fun LesenUserDB(user: String) : String {
 
     // SQL erstellen um Zeilen aus DB zu laden
     val sql = "select  b2.userid, b2.passwort, b2.vorname, b2.nachname, b2.email, b2.funktion, b2.Admin from Benutzer b2 , Zeiterfassung z \n" +
-            "where  z.userid = b2.userid and  b2.vorname  = '$user'"
+            "where   b2.vorname  = '$user'"
 
     // SQL ausfuehren
     val data = statement.executeQuery(sql)
-
+    var userId = 0
     // Zeilen ausgeben
     while (data.next()) {
-        userId = data.getInt("userid")
-        passwort = data.getString("passwort")
-        vorname = data.getString("vorname")
-        nachname = data.getString("nachname")
-        email = data.getString("email")
-        funktion = data.getString("funktion")
-        admin    = data.getString("admin")
+        userId      = data.getInt("userid")
+        passwort    = data.getString("passwort")
+        vorname     = data.getString("vorname")
+        nachname    = data.getString("nachname")
+        email       = data.getString("email")
+        funktion    = data.getString("funktion")
+        admin       = data.getString("admin")
 
     //        println("Zeile: $userId | $passwort | $vorname | $nachname | $email | $funktion")         // Kontrolle Ausgabe
     }
-    val userIdString = userId.toString()
+    userIdString = userId.toString()
 
     return "$userIdString $passwort $vorname $nachname $email $funktion $admin"
 }

@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19125e90-b529-43dd-900a-4d423a336e09" name="Changes" comment="22-01-24 Erstellen LogIn Code &amp; Code Lesen aller Benutzerdaten">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Menue.kt" afterDir="false" />
+    <list default="true" id="19125e90-b529-43dd-900a-4d423a336e09" name="Changes" comment="22-01-24 Erstellen LogIn Code &amp; Code Lesen aller Benutzerdaten erweitern mit Log out funktion noch unvolständig - ordnen der Funtktionen und Aufbau der Projektstruktur - ZUSAMMENfÜHREN des Branch Nikola 22-01-2024">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/LesenUserDB.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/LesenUserDB.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/LogIn.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/LogIn.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Menue.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Menue.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +49,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Nikola-22-01-24",
+    "git-widget-placeholder": "master",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.3413793",
@@ -104,7 +105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705943555653</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="22-01-24 Erstellen LogIn Code &amp; Code Lesen aller Benutzerdaten erweitern mit Log out funktion noch unvolständig - ordnen der Funtktionen und Aufbau der Projektstruktur - ZUSAMMENfÜHREN des Branch Nikola 22-01-2024">
+      <option name="closed" value="true" />
+      <created>1705948161532</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705948161532</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -123,7 +132,8 @@
     <MESSAGE value="12-01-24 Zeiterfassung Eintrag Code erstellt. Funktion DatenbankEintraZeit erstellt" />
     <MESSAGE value="12-01-24 Zeiterfassung Eintrag Code erstellt. Funktion DatenbankEintraZeit erstellt v02 - Zeiterfassung COde mit DatenbankEintraZeit funktion in Datenbank geschrieben" />
     <MESSAGE value="22-01-24 Erstellen LogIn Code &amp; Code Lesen aller Benutzerdaten" />
-    <option name="LAST_COMMIT_MESSAGE" value="22-01-24 Erstellen LogIn Code &amp; Code Lesen aller Benutzerdaten" />
+    <MESSAGE value="22-01-24 Erstellen LogIn Code &amp; Code Lesen aller Benutzerdaten erweitern mit Log out funktion noch unvolständig - ordnen der Funtktionen und Aufbau der Projektstruktur - ZUSAMMENfÜHREN des Branch Nikola 22-01-2024" />
+    <option name="LAST_COMMIT_MESSAGE" value="22-01-24 Erstellen LogIn Code &amp; Code Lesen aller Benutzerdaten erweitern mit Log out funktion noch unvolständig - ordnen der Funtktionen und Aufbau der Projektstruktur - ZUSAMMENfÜHREN des Branch Nikola 22-01-2024" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
