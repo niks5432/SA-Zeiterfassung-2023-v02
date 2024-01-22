@@ -53,8 +53,6 @@ fun DatenbankEintraZeit(userId: Int, startzeit: LocalTime, endzeit: LocalTime, p
     val eintragid       =  0
     val datum           =  LocalDate.now()
 
-
-
     // Verbindung zur DB herstellen
     val connection= DriverManager.getConnection(URL, USER, PASSWORD)
 
