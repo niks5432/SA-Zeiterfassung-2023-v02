@@ -3,7 +3,7 @@ import java.sql.*
 import java.time.LocalDateTime
 import java.util.*
 
-fun main() {
+fun benutzerErstellen() {
     val scanner = Scanner(System.`in`)
 
     // Generate automatic user ID
@@ -32,8 +32,8 @@ fun main() {
     val DATABASE = "test7"
     val OPTIONS = "useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC"
     val URL = "$PROTOCOL://$HOST:$PORT/$DATABASE?$OPTIONS"
-    val USER = "test"
-    val PASSWORD = "password"
+    val USER =     "UserTest"
+    val PASSWORD = "admin"
 
     // Verbindung zur DB herstellen
     val connection = DriverManager.getConnection(URL, USER, PASSWORD)

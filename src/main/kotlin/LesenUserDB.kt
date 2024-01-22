@@ -20,7 +20,7 @@ fun LesenUserDB(user: String) : String {
     val PROTOCOL = "jdbc:mysql"
     val HOST =     "localhost"
     val PORT =     3306
-    val DATABASE = "SA-Semesterarbeit-2023"
+    val DATABASE = "test7"
     val OPTIONS =  "useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC"
     val URL =      "$PROTOCOL://$HOST:$PORT/$DATABASE?$OPTIONS"
     val USER =     "UserTest"
