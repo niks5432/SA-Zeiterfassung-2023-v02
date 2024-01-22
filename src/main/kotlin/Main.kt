@@ -1,90 +1,60 @@
-/*
- * Titel: Zeiterfassung MAIN
- * Firma: ABB TS
- * Autor: Nikola Djukic
- */
 
-import java.sql.Time
+///*
+// * Titel: Zeiterfassung MAIN
+// * Firma: ABB TS
+// * Autor: Nikola Djukic
+// */
+//
+
 import java.time.Duration
-import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.LocalTime
-import java.util.*
+var userId = 0
+var passwort = ""
+var vorname = ""
+var nachname = ""
+var email = ""
+var funktion = ""
+var admin = ""
 
 fun main() {
 
-    // Variablen Deklaration
+    do {
+        // damit Ende eingeleitet werden kann
+        var schleifenEndeLogIn   = false
 
-    val currentDateTime = LocalDateTime.now()
+        // Benutzer abfrage
+        println("Bitte den Benutzer eingeben")
+        val user = readln()
 
-    var buttonStart = 0
-    var buttonPause = 1
+        // Passwort abfrage
+        println("Bitte das Passwort für den Benutzer $user eingeben")
+        var userpasswort = readln()
 
-    var startZeit           = LocalTime.now()
-    var endZeit             = LocalTime.now()
-    var pausenzeitBeginn    = LocalTime.now()
-    var pausenzeitEnde      = LocalTime.now()
+        userDaten = LesenUserDB(user)                                     // Lesen der Benutzer Daten aus der Datenbank und speichern in userDaten
+        //println(userDaten)                                             //um Ausgabe zu überprüfen
 
-
-    // Schleife um die Zeiten für den heutigen Ta zu eruieren
-    while (buttonStart <= 3) {
-
-        // Einlesen welches ereigniss gerade stattfindet
-        println("Badge Scanen")
-        buttonStart = readln().toInt()
-
-        // Bedingungen die ausgeführt werden nach dem Einlesen des ereignisses
-        when (buttonStart) {
-            1 -> {
-                startZeit = LocalTime.now()
-                startZeit = startZeit.withNano(0)
-
-                println("Startzeit $startZeit")
-
+        val userDatenSplit = SplitString(userDaten)                     // Splitet den String userDaten nach Abstand und speichert es in userDaten Split
+        if (userDatenSplit.get(2) == user) {                           //überprüft ob der Benutername in Datenbank enthalten ist
+            if (userDatenSplit.get(1) == userpasswort) {              //überprüft ob Passwirt in der Datenbank mit dem Benutzerpasswort übereinstimmt
+                    schleifenEndeLogIn = true
+                    println("Herzlich Wilkommen Benutzer: $user")
+                    if (user == "Nikola") {
+                        println("Master Of Univers")
+                    }
+                    menue(admin)
+            }else {
+                println("Falsches Passwort")
             }
-
-            4 -> {
-                endZeit = LocalTime.now()
-                endZeit = endZeit.withNano(0)
-
-                println("Endzeit $endZeit")
-            }
-
-            2 -> {
-                pausenzeitBeginn = LocalTime.now()
-                pausenzeitBeginn = pausenzeitBeginn.withNano(0)
-
-                println("pausenzeitBeginn $pausenzeitBeginn")
-            }
-
-            3 -> {
-                pausenzeitEnde = LocalTime.now()
-                pausenzeitEnde = pausenzeitEnde.withNano(0)
-
-                println("pausenzeitEnde $pausenzeitEnde")
-            }
+        } else {
+            println("Falscher Benutzername")
         }
-    }
-
-    // Deklaration und ausrechnen der Arbeits & Pausenzeit
-    var arbeitsZeit = Duration.between(startZeit,endZeit)
-    var pausenZeit  = Duration.between(pausenzeitBeginn,pausenzeitEnde)
-
-    // Mit ${} kan in println eine funktion aufgerufen werden
-    println("Arbeitszeit: ${formatiereZeit(arbeitsZeit)} | Pausenzeit: ${formatiereZeit(pausenZeit)}")
-
-    val zeiten = mutableListOf(startZeit, endZeit, formatiereZeit(pausenZeit))
-
-    println(zeiten)
-
-
+    } while (schleifenEndeLogIn != true)                             //Bedingung damit Schleife weiter geführt wird
 }
 
-// Funktion damit die Zeit korrekt formatiert wird, weil Duration Methode einen ISO Datentypen zurückgibt
-fun formatiereZeit (dauer: Duration): String {
-    val stunden = dauer.toHours()
-    val minuten = dauer.toMinutesPart()
-    val sekunden = dauer.toSecondsPart()
 
-    return "$stunden:$minuten:$sekunden"
-}
+
+
+
+
+

@@ -21,11 +21,24 @@
 
 import java.sql.DriverManager
 import java.sql.*
+import java.sql.Date
+import java.time.LocalDate
 import java.time.LocalDateTime
+import java.time.LocalTime
 import java.util.*
 
 
-fun DatenbankEintraZeit() {
+//fun main () {
+//    var userId      = 1
+//    var startzeit : LocalTime
+//    startzeit   = 9:00;00.00
+//
+//
+//}
+
+
+
+fun DatenbankEintraZeit(userId: Int, startzeit: LocalTime, endzeit: LocalTime, pausenzeit: String, abwesenheitsid: Int, zustandid: Int ) {
     val currentDateTime = LocalDateTime.now()
     val PROTOCOL = "jdbc:mysql"
     val HOST =     "localhost"
@@ -37,12 +50,8 @@ fun DatenbankEintraZeit() {
     val PASSWORD = "admin"
 
     // Zu speichernde Daten
-    val userId      =   0
-    val vorname     =   "Michi"
-    val nachname    =   "Der"
-    val passwort    =   "2580"
-    val email       =   "michi.der@der.ch"
-    val funktion    =   "Handlanger"
+    val eintragid       =  0
+    val datum           =  LocalDate.now()
 
     // Verbindung zur DB herstellen
     val connection= DriverManager.getConnection(URL, USER, PASSWORD)
@@ -51,20 +60,24 @@ fun DatenbankEintraZeit() {
     val statement = connection.createStatement()
 
     // SQL erstellen um Daten in DB speichern
-    val sql = """INSERT INTO Benutzer (
-                     userid,
-                     passwort,
-                     vorname,
-                     nachname,
-                     email,
-                     funktion)
+    val sql = """INSERT INTO Zeiterfassung (
+                     eintragid,
+                     userId,
+                     datum,
+                     startzeit,
+                     endzeit,
+                     pausenzeit,                 
+                     abwesenheitsid,
+                     zustandid)
                  VALUES (
-                     '$variableUserId',
-                     '$variablePasswort',
-                     '$variableVorname',
-                     '$variableNachname',
-                     '$variableEmail',
-                     '$variableFunktion'
+                     '$eintragid',
+                     '$userId',
+                     '$datum',
+                     '$startzeit',
+                     '$endzeit',
+                     '$pausenzeit',
+                     '$abwesenheitsid',
+                     '$zustandid'
                  )"""
 
     // SQL ausfuehren
