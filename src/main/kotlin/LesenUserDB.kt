@@ -11,8 +11,8 @@
  * MySQL Server muss in Betrieb sein.
  */
 
-import java.sql.DriverManager
-import java.time.LocalDateTime
+import java.sql.*
+import java.time.*
 import java.util.*
 
 fun LesenUserDB(user: String) : String {
@@ -20,7 +20,7 @@ fun LesenUserDB(user: String) : String {
     val PROTOCOL = "jdbc:mysql"
     val HOST =     "localhost"
     val PORT =     3306
-    val DATABASE = "test7"
+    val DATABASE = "SA-Semesterarbeit-2023"
     val OPTIONS =  "useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC"
     val URL =      "$PROTOCOL://$HOST:$PORT/$DATABASE?$OPTIONS"
     val USER =     "UserTest"
@@ -38,7 +38,7 @@ fun LesenUserDB(user: String) : String {
 
     // SQL ausfuehren
     val data = statement.executeQuery(sql)
-    var userId = 0
+    var userId = 1
     // Zeilen ausgeben
     while (data.next()) {
         userId      = data.getInt("userid")

@@ -4,13 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19125e90-b529-43dd-900a-4d423a336e09" name="Changes" comment="22-01-24 Erstellen LogIn Code &amp; Code Lesen aller Benutzerdaten erweitern mit Log out funktion noch unvolständig - ordnen der Funtktionen und Aufbau der Projektstruktur - ZUSAMMENfÜHREN des Branch Nikola 22-01-2024">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_2_02.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_2_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_2_0.xml" afterDir="false" />
+    <list default="true" id="19125e90-b529-43dd-900a-4d423a336e09" name="Changes" comment="22-01-24 Verbesserungen logIn Code &amp; Menue - erstellen von Diversen allgemeinen Funktionen">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/EintragBenutzerDB.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/EintragBerichgtDB.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/LesenEintragIdDB.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j_8_2_02.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/DatenbankEintraZeit.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/DatenbankEintragZeit.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Funktionen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Funktionen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/benutzerErstellen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/benutzerErstellen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/LesenUserDB.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/LesenUserDB.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/LogIn.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/LogIn.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Menue.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Menue.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ZeitEruieren.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ZeitEruieren.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/benutzerErstellen.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,41 +52,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultPlantUmlFileTemplate": "UML Sequence",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/alexa/ABB Technikerschule/Semesterarbeit - Semesterarbeit/05 - Realisierung/01 - Code/Lib/mysql-connector-j-8.2.0/mysql-connector-j-8.2.0.jar",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.3413793",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Sequence&quot;,
+    &quot;Kotlin.MainKt.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.3413793&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Kotlin.MainKt">
-    <configuration name="BenutzerErstellenKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BenutzerErstellenKt" />
-      <module name="SA-Zeiterfassung-2023-v02" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainKt" />
-      <module name="SA-Zeiterfassung-2023-v02" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Kotlin.MainKt" />
-        <item itemvalue="Kotlin.BenutzerErstellenKt" />
-      </list>
-    </recent_temporary>
+}</component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-azul-21.0.2-3183f394aec4-97115adc" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -157,6 +152,17 @@
     <MESSAGE value="22-01-24 Erstellen LogIn Code &amp; Code Lesen aller Benutzerdaten" />
     <MESSAGE value="22-01-24 Erstellen LogIn Code &amp; Code Lesen aller Benutzerdaten erweitern mit Log out funktion noch unvolständig - ordnen der Funtktionen und Aufbau der Projektstruktur - ZUSAMMENfÜHREN des Branch Nikola 22-01-2024" />
     <option name="LAST_COMMIT_MESSAGE" value="22-01-24 Erstellen LogIn Code &amp; Code Lesen aller Benutzerdaten erweitern mit Log out funktion noch unvolständig - ordnen der Funtktionen und Aufbau der Projektstruktur - ZUSAMMENfÜHREN des Branch Nikola 22-01-2024" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/main/kotlin/EintragBerichgtDB.kt</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

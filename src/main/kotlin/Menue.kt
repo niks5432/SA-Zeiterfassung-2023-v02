@@ -16,6 +16,9 @@ fun menue(admin: String) {
                 3 -> zeiterfassungVisieren()
                 4 -> benutzerErstellen()
                 5 -> schleifeEndeLogOut = false
+                else -> {
+                    println("Falsche eingabe")
+                }
             }
         } else {
             println("-----Menue----")
@@ -30,6 +33,10 @@ fun menue(admin: String) {
                 2 -> zeitArchiv()
                 3 -> zeiterfassungVisieren()
                 5 -> schleifeEndeLogOut = false
+                else -> {
+                    println("Falsche eingabe")
+                }
+
             }
         }
     } while (schleifeEndeLogOut == true)

@@ -1,4 +1,5 @@
 import java.time.Duration
+import java.util.*
 
 fun formatiereZeit (dauer: Duration): String {
     val stunden = dauer.toHours()
@@ -22,20 +23,39 @@ fun zeiterfassungVisieren() {
 
 }
 
-//fun benutzerErstellen()  {
-//
-//
-//}
+fun benutzerErstellen()  {
+    val scanner = Scanner(System.`in`)
+
+// Generate automatic user ID
+    val userId = 0
+
+// Get user input
+    print("Vorname: ")
+    val vorname = scanner.nextLine()
+
+    print("Nachname: ")
+    val nachname = scanner.nextLine()
+
+    print("Passwort: ")
+    val passwort = scanner.nextLine()
+
+    print("Email: ")
+    val email = scanner.nextLine()
+
+    print("Funktion: ")
+    val funktion = scanner.nextLine()
+
+    eintragBenutzerDb(userId, vorname, nachname, passwort, email, funktion)
+
+}
 
 
 fun berichteintrag() {
 
     println("Bitte heutige Arbeit zusammenfassen")
-    val Bericht = readln()
-    EintragBerichgtDB()
+    val bericht = readln()
+    val eientragid = lesenEintragIdDB()
+    EintragBerichgtDB(bericht, eientragid)
 }
 
-fun EintragBerichgtDB() {
 
-
-}

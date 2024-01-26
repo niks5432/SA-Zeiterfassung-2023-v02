@@ -20,23 +20,9 @@
  */
 
 import java.sql.DriverManager
-import java.sql.*
-import java.sql.Date
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.LocalTime
-import java.util.*
-
-
-//fun main () {
-//    var userId      = 1
-//    var startzeit : LocalTime
-//    startzeit   = 9:00;00.00
-//
-//
-//}
-
-
 
 fun DatenbankEintraZeit(userId: Int, startzeit: LocalTime, endzeit: LocalTime, pausenzeit: String, abwesenheitsid: Int, zustandid: Int ) {
     val currentDateTime = LocalDateTime.now()
