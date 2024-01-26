@@ -24,7 +24,7 @@ import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.LocalTime
 
-fun DatenbankEintraZeit(userId: Int, startzeit: LocalTime, endzeit: LocalTime, pausenzeit: String, abwesenheitsid: Int, zustandid: Int ) {
+fun eintragZeitDB(userId: Int, startzeit: LocalTime, endzeit: LocalTime, pausenzeit: String, abwesenheitsid: Int, zustandid: Int ) {
     val currentDateTime = LocalDateTime.now()
     val PROTOCOL = "jdbc:mysql"
     val HOST =     "localhost"

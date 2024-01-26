@@ -36,7 +36,6 @@ fun menue(admin: String) {
                 else -> {
                     println("Falsche eingabe")
                 }
-
             }
         }
     } while (schleifeEndeLogOut == true)

@@ -66,7 +66,7 @@ fun zeitEruieren() {
 
     println(zeiten)
 
-    DatenbankEintraZeit(userId, startZeit, endZeit, formatiereZeit(pausenZeit), zustandid = 1, abwesenheitsid = 4)
+    eintragZeitDB(userId, startZeit, endZeit, formatiereZeit(pausenZeit), zustandid = 1, abwesenheitsid = 4)
 
     berichteintrag()
 }
